@@ -39,10 +39,16 @@ public class CalcController {
 		return "res";
 
 	}
+	@PostMapping("resMultiply")
+	public String resMultiply(
+			Model model,
+			@RequestParam("numA") String NumA,
+			@RequestParam("numB") String NumB
+	) {
 
-	//	引き算、掛け算、割り算を記載していきましょう。
-	//	ですが、割り算はちょっと特殊なので注意しましょう！
-	//	割り算の答えの出し方をよく思い出してくださいね、他の掛け算までの答え方とは別で回答パターンが複数あると思います、
-	//	それを意識してコードを書いていってください。
+		model.addAttribute("kotae", service.calculateMultiply(NumA, NumB));
 
+		return "res";
+
+	}
 }
