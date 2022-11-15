@@ -51,4 +51,15 @@ public class CalcController {
 		return "res";
 
 	}
+	@PostMapping("resDivide")
+	public String resDivide(
+			Model model,
+			@RequestParam("numA") String NumA,
+			@RequestParam("numB") String NumB
+		
+     ) {
+		model.addAttribute("kotae", service.calculateDivide(NumA, NumB));
+
+		return "res";
+	}
 }
