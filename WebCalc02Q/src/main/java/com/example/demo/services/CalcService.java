@@ -21,6 +21,19 @@ public class CalcService {
 		return AdResult;
 
 	}
+	public String calculateSubtract(
+			String NumA,
+			String NumB
+
+	)
+
+	{
+		BigDecimal AdA = new BigDecimal(NumA);
+		BigDecimal AdB = new BigDecimal(NumB);
+		BigDecimal AdR = AdA.subtract(AdB);
+		String AdResult = AdR.toString();
+		return AdResult;
+	}
 
 	//		割り算に関しては特殊なので注意
 	//		
